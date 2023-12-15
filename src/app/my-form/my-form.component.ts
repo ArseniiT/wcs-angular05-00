@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Order } from '../model/order.model';
 
 @Component({
   selector: 'app-my-form',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./my-form.component.css']
 })
 export class MyFormComponent {
+  model: Order = new Order("", 0, new Date(), "");
+
+  onSubmit(): void {
+    console.log('Submit')
+  }
 
 }
